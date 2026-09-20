@@ -38,5 +38,5 @@ jobs:
 
     - name: Docker push
       run: |
-        docker tag netflix_frontend:latest ${{ steps.login-ecr.outputs.registry }}/netflix-frontend:${GITHUB_RUN_NUMBER}
+        docker tag netflix-frontend:latest ${{ steps.login-ecr.outputs.registry }}/netflix-frontend:${GITHUB_RUN_NUMBER}
         docker push ${{ steps.login-ecr.outputs.registry }}/netflix-frontend:${GITHUB_RUN_NUMBER}
